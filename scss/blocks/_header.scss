@@ -1,0 +1,77 @@
+.header {
+    padding-block: 24px;
+    margin-bottom: 92px;
+    width: 100%;
+    height: 104px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    &__logo {
+        z-index: 2;
+        @media screen and (max-width: 768px) {
+            height: 32px;
+            width: 101px;
+        }
+    }
+    &__hints {
+        display: flex;
+        column-gap: 18px;
+        .hint {
+            width: 141px;
+            height: 40px;
+            background: $hintBgc;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 14px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            > svg {
+                margin-right: 7.2px;
+                @media screen and (max-width: 768px) {
+                    margin-right: 4.6px;
+                }
+            }
+            z-index: 3;
+            .calendar {
+                width: 13px;
+                height: 15px;
+                @media screen and (max-width: 768px) {
+                    height: 11.5px;
+                    width: 10.45px;
+                }
+            }
+            .clock {
+                width: 17px;
+                height: 17px;
+                @media screen and (max-width: 768px) {
+                    height: 10.34px;
+                    width: 10.34px;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                width: 88px;
+                height: 24px;
+                font-size: 11px;
+                line-height: 8px;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            column-gap: 6px;
+        }
+    }
+    @media screen and (max-width: 968px) {
+        max-width: 550px;
+        margin: 0 auto;
+    }
+    @media screen and (max-width: 768px) {
+        max-width: 350px;
+        margin: 0 auto;
+        margin-bottom: 5px;
+        padding: 12px 15px;
+    }
+}

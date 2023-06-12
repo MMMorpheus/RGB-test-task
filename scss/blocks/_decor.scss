@@ -1,0 +1,117 @@
+.decor {
+    position: absolute;
+    z-index: 0;
+    background-color: $decor;
+    filter: blur(103.131px);
+    transform: rotate(9.41deg);
+}
+.decor__left {
+    width: 399.01px;
+    height: 400.31px;
+    top: -70px;
+    left: -31.33px;
+    opacity: 0.5;
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+}
+.decor__rigth {
+    width: 790.65px;
+    height: 793.23px;
+    top: -37%;
+    right: -10%;
+    opacity: 0.8;
+    @media screen and (max-width: 968px) {
+        position: fixed;
+        right: 0;
+        top: 430px;
+    }
+}
+.decorIcon {
+    position: absolute;
+    @media screen and (max-width: 1376px) {
+        display: none;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 6px;
+        height: 6px;
+        background-color: #fff;
+        border-radius: 50%;
+        
+    }
+}
+.html {
+    width: 88.28px;
+    height: 88.28px;
+    // left: 1392.61px;
+    // top: 241.81px;
+    left: 90%;
+    top: 32%;
+    &::after {
+        width: 8px;
+        height: 8px;
+        background-color: #F16529;
+        top: 15px;
+        right: -15px;
+    }
+}
+.css {
+    width: 60.4px;
+    height: 85.45px;
+    // left: 1293.8px;
+    // top: 364.22px;
+    left: 85%;
+    top: 50%;
+    &::after {
+        background-color: #2965F1;
+        top: -6px;
+        right: 3px;
+    }
+}
+.js {
+    width: 61.89px;
+    height: 72.94px;
+    // left: 1419.16px;
+    // top: 404.2px;
+    left: 91.5%;
+    top: 60%;
+    &::after {
+        width: 8px;
+        height: 8px;
+        background-color: #F0BE25;
+        top: 14px;
+        right: -15px;
+    }
+}
+.sublime {
+    width: 53.93px;
+    height: 53.93px;
+    // left: 1296px;
+    // top: 498.06px;
+    left: 84%;
+    top: 70%;
+    &::after {
+        background-color: #FF9800;
+        top: -15px;
+        right: -5px;
+    }
+
+    
+}
+.vscode {
+    width: 60.62px;
+    height: 60.62px;
+    // left: 1371px;
+    // top: 568.29px;
+    left: 89%;
+    top: 80%;
+    &::after {
+        background-color: #48AEF3;
+        bottom: 2px;
+        right: -15px;
+    }
+}
+

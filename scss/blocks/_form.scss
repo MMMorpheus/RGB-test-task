@@ -1,0 +1,173 @@
+.form {
+    width: 366px;
+    height: 474px;
+    background: $formBackgroundColor;
+    border-radius: 10px;
+    padding: 50px 60px;
+
+    &__title {
+        margin: 0 auto;
+        max-width: 280px;
+        font-size: 21px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 25.99px;
+        span {
+            color: $pink;
+        }
+        margin-bottom: 20px;
+        @media screen and (max-width: 380px) {
+            margin-bottom: 18px;
+        }
+    }
+    &__fields {
+        display: flex;
+        flex-direction: column;
+        row-gap: 14px;
+        & > * {
+            width: 100%;
+            height: 51px;
+        }
+        margin-bottom: 20px;
+    }
+    &__input {
+        border-radius: 5px;
+        width: 100%;
+        height: 51px;
+        border: none;
+        font-weight: 400;
+        text-indent: 22px;
+        color: #fff;
+        letter-spacing: 0.5px;
+        font-size: 16px;
+
+        background-color: $inputBackgroundColor;
+        &::placeholder {
+            letter-spacing: normal;
+            font-size: 13px;
+            color: $placeholderColor;
+            line-height: 24px;
+            @media screen and (max-width: 768px) {
+                font-size: 12px;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            text-indent: 26px;
+        }
+    }
+    &__btn {
+        border: none;
+        border-radius: 5px;
+        background-color: $pink;
+        color: inherit;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 24px;
+        @media screen and (max-width: 768px) {
+            background-color: #0048ff;
+            width: 222px;
+            margin: 0 auto;
+        }
+    }
+    &__confirm {
+        max-width: 190px;
+        margin-inline: auto;
+        text-align: center;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+        color: rgba(255, 255, 255, 0.5);
+
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 97%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.5);
+            bottom: 2px;
+            left: 3px;
+        }
+        > a {
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+    @media screen and (max-width: 968px) {
+        margin-bottom: 36px;
+    }
+    @media screen and (max-width: 768px) {
+        padding: 41px 21px;
+    }
+}
+
+.control-wrapper:nth-child(2) {
+    position: relative;
+}
+
+.triangle {
+    position: absolute;
+    top: 48%;
+    left: 3%;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid white;
+    transition: transform 0.3s ease;
+    &._active {
+        transform: rotate(180deg);
+    }
+    cursor: pointer;
+}
+
+.shortcut {
+    position: absolute;
+    right: 5%;
+    top: 25%;
+    > img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.countries {
+    display: none;
+    position: absolute;
+    bottom: -200%;
+    left: 0;
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(17 27 58 / 95%);
+    z-index: 1;
+
+    &__item {
+        position: relative;
+        padding-left: 5px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: transparent;
+        }
+
+        > span {
+            text-transform: capitalize;
+            margin-left: 15px;
+        }
+        
+        &:hover {
+            background-color: #272e42;
+        }
+    }
+}

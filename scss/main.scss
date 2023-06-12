@@ -1,0 +1,78 @@
+@import "normalize.scss";
+@import "font.scss";
+@import "vars.scss";
+@import "./blocks/decor.scss";
+@import "./blocks/header.scss";
+@import "./blocks/intro.scss";
+@import "./blocks/form.scss";
+@import "./blocks/list.scss";
+@import "./blocks/footer.scss";
+
+body {
+    font-family: Gilroy, sans-serif;
+    background-color: $body;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 1040px;
+    height: 100%;
+    margin: 10px auto;
+    padding: 0 56px;
+    .main {
+        position: relative;
+        .first {
+            display: flex;
+            justify-content: space-between;
+            @media screen and (max-width: 968px) {
+                position: static;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 20px;
+            }
+        }
+    }
+    @media screen and (max-width: 1020px) {
+        width: 940px;
+    }
+    @media screen and (max-width: 968px) {
+        width: 880px;
+    }
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding: 0 16px;
+    }
+    @media screen and (max-width: 576px) {
+        padding: 0 10px;
+    }
+}
+.phrase {
+    position: fixed;
+    bottom: -50px;
+    left: 11%;
+    font-weight: 800;
+    font-size: 129.359px;
+    line-height: 158px;
+    text-transform: uppercase;
+    color: $body;
+    text-shadow: 0 0 1px rgba($color: #fff, $alpha: 0.5);
+    @media screen and (max-width: 1617px) {
+        display: none;
+        
+    }
+}
+@supports (-webkit-text-stroke: 1px rgba($color: #fff, $alpha: 0.5)) {
+    .phrase {
+        text-shadow: none;
+        color: transparent;
+        -webkit-text-stroke: 1px rgba($color: #fff, $alpha: 0.5);
+    }
+}
+.iti__flag {background-image: url("../intl-tel-input-18.1.6/build/img/flags.png");}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {background-image: url("./intl-tel-input-18.1.6/build/img/flags@2x.png");}
+}
